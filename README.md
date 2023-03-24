@@ -1,25 +1,5 @@
-# Phase 3 Mock Code Challenge: Theater Work
+# Theater Work
 
-## Learning Goals
-
-- Write SQLAlchemy migrations.
-- Connect between tables using SQLAlchemy relationships.
-- Use SQLAlchemy to run CRUD statements in the database.
-
-***
-
-## Key Vocab
-
-- **Schema**: the blueprint of a database. Describes how data relates to other
-  data in tables, columns, and relationships between them.
-- **Persist**: save a schema in a database.
-- **Engine**: a Python object that translates SQL to Python and vice-versa.
-- **Session**: a Python object that uses an engine to allow us to
-  programmatically interact with a database.
-- **Transaction**: a strategy for executing database statements such that
-  the group succeeds or fails as a unit.
-- **Migration**: the process of moving data from one or more databases to one
-  or more target databases.
   
 ***
 
@@ -34,51 +14,41 @@ An actor may only `Audition` for one `Role`, while a `Role` may have many
 
 ## Getting started
 
-Run `pipenv install; pipenv shell`
 
-## Migrations
+- `Auditions` should have an actor (string), location (string), hired (boolean) and **belong to** a role.
+- `Roles` should only have a character_name (string) and **have many** auditions.
 
-Create your migrations.
-
-- `Auditions` should have an actor (string), location (string) and belong_to a
-  role (integer).
-- `Roles` should only have a character_name.
-
-### `auditions` Table
-
-| Column | Type |
-| --- | --- |
-| actor | string |
-| location | string |
-| phone | integer |
-| hired | boolean |
-| role_id | integer |
-
-### `roles` Table
-
-| Column | Type |
-| --- | --- |
-| character_name | string |
-  
 ## Relationship
 
 - What relationships will this need (i.e. one-to-one, one-to-many, and
   many-to-many)?
 
+## A note about notation
+
+- When you see a `"#"` the functionality is related to the instance, a `"."` the class.
+
+## Testing
+
+- You can now view all of your Python files for your models in the lib folder. They will be automagically available for you so long as you use the `python debug.py` instruction to test your code.
+
+- Through this `debug.py` file, we've provided to you a console that you can use to test your code. To enter a console session, run `python debug.py` from the command line. You'll be able to test out the functionality that you write there.
+
+---
+
 ## Audition
 
-- `Audition.role` returns an instance of role associated with this audition.
-- `Audition.call_back()` will change the the hired attribute to `True`.
+- `Audition#role` returns an instance of role associated with this audition.
+- `Audition#call_back()` will change the the hired attribute to `True`.
 
 ## Roles
 
-- `Role.auditions` returns all of the auditions associated with this role.
-- `Role.actors` returns a list of names from the actors associated with this
+- `Role#auditions` returns all of the auditions associated with this role.
+- `Role#actors` returns a list of names from the actors associated with this
   role.
-- `Role.locations` returns a list of locations from the auditions associated
+- `Role#locations` returns a list of locations from the auditions associated
   with this role.
-- `Role.lead()` returns the first instance of the audition that was hired for
+- `Role#lead` returns the first instance of the audition that was hired for
   this role or returns a string 'no actor has been hired for this role'.
-- `Role.understudy()` returns the second instance of the audition that was hired
+- `Role#understudy` returns the second instance of the audition that was hired
   for this role or returns a string 'no actor has been hired for understudy for
   this role'.

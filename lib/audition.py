@@ -1,0 +1,3 @@
+
+class Audition:
+    pass

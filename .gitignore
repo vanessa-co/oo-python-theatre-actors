@@ -1,4 +1,2 @@
-.DS_Store
-
-*.db
-*.sqlite
+__pycache__
+lib/__pycache__
