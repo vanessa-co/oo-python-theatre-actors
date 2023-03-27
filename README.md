@@ -1,4 +1,4 @@
-# Theater Work
+# Actor's Theater Work
 
   
 ***
@@ -7,8 +7,7 @@
 
 The Flatiron Theater Company is holding auditions!
 
-An actor may only `Audition` for one `Role`, while a `Role` may have many
-`Auditions` for it!
+An Actor may `Audition` for many `Roles`, while a `Role` may have many `Auditions` for it & many `Actors` through Auditions!
 
 &nbsp;
 
