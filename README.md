@@ -63,4 +63,4 @@ different character names that this actor has been **hired** for.
   role.
 - `Role#locations` returns a list of locations from the auditions associated
   with this role.
-- `Role.silver_screen` returns a list of strings for all the character names who have been hired.
+- `Role.silver_screen` returns a unique list of strings for all the character names who have been hired.
