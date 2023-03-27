@@ -10,13 +10,18 @@ The Flatiron Theater Company is holding auditions!
 An actor may only `Audition` for one `Role`, while a `Role` may have many
 `Auditions` for it!
 
-![one to many](https://curriculum-content.s3.amazonaws.com/phase-3/active-record-theater-work/one_to_many.png)
+&nbsp;
+
+# Actor ----< Audition >---- Role
+
+&nbsp;
 
 ## Getting started
 
 
-- `Auditions` should have an actor (string), location (string), hired (boolean) and **belong to** a role.
-- `Roles` should only have a character_name (string) and **have many** auditions.
+- `Auditions` should have a location (string), hired (boolean), **belong to** a role, and **belong to** an Actor
+- `Roles` should only have a character_name (string), **have many** auditions, and **have many** actors **through** auditions.
+- `Actors` should only have name ( string ), **have many** auditions, and **have many** roles **through** auditions. 
 
 ## Relationship
 
@@ -40,6 +45,16 @@ An actor may only `Audition` for one `Role`, while a `Role` may have many
 - `Audition#role` returns an instance of role associated with this audition.
 - `Audition#call_back()` will change the the hired attribute to `True`.
 
+## Actor
+
+- `Actor#auditions` returns a list of auditions this actor attended.
+- `Actor#roles` returns a list of roles the actor auditioned for.
+- `Actor#characters` returns a list of strings with all the 
+different character names this actor auditioned for.
+- `Actor#paychecks` returns a list of strings with all the 
+different character names that this actor has been **hired** for.
+
+
 ## Roles
 
 - `Role#auditions` returns all of the auditions associated with this role.
@@ -52,3 +67,4 @@ An actor may only `Audition` for one `Role`, while a `Role` may have many
 - `Role#understudy` returns the second instance of the audition that was hired
   for this role or returns a string 'no actor has been hired for understudy for
   this role'.
+- `Role.silver_screen` returns a list of strings for all the character names who have been hired.
