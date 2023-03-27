@@ -43,6 +43,7 @@ An actor may only `Audition` for one `Role`, while a `Role` may have many
 ## Audition
 
 - `Audition#role` returns an instance of role associated with this audition.
+- `Audition#actor` returns an instance of actor associated with this audition.
 - `Audition#call_back()` will change the the hired attribute to `True`.
 
 ## Actor
