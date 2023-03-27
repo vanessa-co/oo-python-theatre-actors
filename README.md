@@ -62,9 +62,4 @@ different character names that this actor has been **hired** for.
   role.
 - `Role#locations` returns a list of locations from the auditions associated
   with this role.
-- `Role#lead` returns the first instance of the audition that was hired for
-  this role or returns a string 'no actor has been hired for this role'.
-- `Role#understudy` returns the second instance of the audition that was hired
-  for this role or returns a string 'no actor has been hired for understudy for
-  this role'.
 - `Role.silver_screen` returns a list of strings for all the character names who have been hired.
