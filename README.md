@@ -19,7 +19,7 @@ An actor may only `Audition` for one `Role`, while a `Role` may have many
 ## Getting started
 
 
-- `Auditions` should have a location (string), hired (boolean), **belong to** a role, and **belong to** an Actor
+- `Auditions` should have a location (string), hired (boolean), **belong to** a role, and **belong to** an actor.
 - `Roles` should only have a character_name (string), **have many** auditions, and **have many** actors **through** auditions.
 - `Actors` should only have name ( string ), **have many** auditions, and **have many** roles **through** auditions. 
 
